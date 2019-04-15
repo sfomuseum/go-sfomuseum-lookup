@@ -6,15 +6,8 @@ prep:
 
 self:   prep rmdeps
 	if test -d src; then rm -rf src; fi
-	mkdir -p src/github.com/sfomuseum/go-sfomuseum-flysfo
-	cp *.go src/github.com/sfomuseum/go-sfomuseum-flysfo/
-	cp -r client src/github.com/sfomuseum/go-sfomuseum-flysfo/
-	cp -r archive src/github.com/sfomuseum/go-sfomuseum-flysfo/
-	cp -r flight src/github.com/sfomuseum/go-sfomuseum-flysfo/
-	cp -r iter src/github.com/sfomuseum/go-sfomuseum-flysfo/
-	cp -r lookup src/github.com/sfomuseum/go-sfomuseum-flysfo/
-	cp -r sfomuseum src/github.com/sfomuseum/go-sfomuseum-flysfo/
-	cp -r storage src/github.com/sfomuseum/go-sfomuseum-flysfo/
+	mkdir -p src/github.com/sfomuseum/go-sfomuseum-lookup
+	cp *.go src/github.com/sfomuseum/go-sfomuseum-lookup/
 	cp -r vendor/* src/
 
 rmdeps:
@@ -38,6 +31,8 @@ vendor-deps: rmdeps deps
 
 fmt:
 	go fmt *.go
+	go fmt cmd/*.go
 
 bin: 	self
 	rm -rf bin/*
+	@GOPATH=$(GOPATH) go build -o bin/lookup-repo cmd/lookup-repo.go
