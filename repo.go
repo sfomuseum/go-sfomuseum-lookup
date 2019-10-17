@@ -59,6 +59,13 @@ func NewRepoLookupFromBucket(bucket *blob.Bucket, lookup_key string, target_key 
 		}
 
 		recordFeature(f, lookup, lookup_key, target_key)
+
+		// be explicit about this here since the defer above doesn't
+		// get invoked as part of the for loop and it's too soon for
+		// adding go routines and explcit throttling or queueing
+		// (20191017/thisisaaronland)
+		
+		fh.Close()		
 	}
 
 	l := RepoLookup{
