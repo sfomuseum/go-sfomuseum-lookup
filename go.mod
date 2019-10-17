@@ -10,4 +10,5 @@ require (
 	github.com/whosonfirst/go-whosonfirst-crawl v0.2.0
 	github.com/whosonfirst/go-whosonfirst-csv v0.1.0
 	github.com/whosonfirst/go-whosonfirst-geojson-v2 v0.11.0
+	gocloud.dev v0.17.0
 )
