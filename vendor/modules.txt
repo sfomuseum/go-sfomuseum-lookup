@@ -1,6 +1,6 @@
 # github.com/aaronland/go-storage v0.0.1
 github.com/aaronland/go-storage
-# github.com/aaronland/go-string v0.1.1
+# github.com/aaronland/go-string v0.1.0
 github.com/aaronland/go-string/dsn
 # github.com/golang/protobuf v1.3.1
 github.com/golang/protobuf/proto
@@ -20,7 +20,7 @@ github.com/hashicorp/golang-lru/simplelru
 github.com/mmcloughlin/geohash
 # github.com/skelterjohn/geom v0.0.0-20180103142417-96f3e8a219c5
 github.com/skelterjohn/geom
-# github.com/tidwall/gjson v1.3.2
+# github.com/tidwall/gjson v1.3.5
 github.com/tidwall/gjson
 # github.com/tidwall/match v1.0.1
 github.com/tidwall/match
@@ -33,7 +33,7 @@ github.com/whosonfirst/go-whosonfirst-csv
 # github.com/whosonfirst/go-whosonfirst-flags v0.1.0
 github.com/whosonfirst/go-whosonfirst-flags
 github.com/whosonfirst/go-whosonfirst-flags/existential
-# github.com/whosonfirst/go-whosonfirst-geojson-v2 v0.11.0
+# github.com/whosonfirst/go-whosonfirst-geojson-v2 v0.12.0
 github.com/whosonfirst/go-whosonfirst-geojson-v2
 github.com/whosonfirst/go-whosonfirst-geojson-v2/feature
 github.com/whosonfirst/go-whosonfirst-geojson-v2/geometry
@@ -72,7 +72,7 @@ go.opencensus.io/internal
 go.opencensus.io/trace/internal
 go.opencensus.io/trace/tracestate
 go.opencensus.io
-# gocloud.dev v0.17.0
+# gocloud.dev v0.18.0
 gocloud.dev/blob
 gocloud.dev/blob/driver
 gocloud.dev/gcerrors
