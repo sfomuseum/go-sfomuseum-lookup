@@ -1,11 +1,11 @@
 package lookup
 
 import (
-	"github.com/aaronland/go-storage"
+	"context"
+	"gocloud.dev/blob"
 	"github.com/tidwall/gjson"
-	"io"
+	"path/filepath"
 	"io/ioutil"
-	"os"
 )
 
 type GJSONLookup struct {
@@ -13,47 +13,36 @@ type GJSONLookup struct {
 	body []byte
 }
 
-func NewGJSONLookupFromStore(store storage.Store, path string) (Lookup, error) {
-
-	fh, err := store.Get(path)
-
-	if err != nil {
-		return nil, err
-	}
-
-	defer fh.Close()
-
-	return NewGJSONLookup(fh)
+func NewGJSONLookup() Lookup {
+	lu := &GJSONLookup{}
+	return lu
 }
 
-// deprecated - please just use NewGJSONLookupFromStore
+func (lu *GJSONLookup) Open(ctx context.Context, uri string) error {
 
-func NewGJSONLookupFromFile(path string) (Lookup, error) {
-
-	fh, err := os.Open(path)
+	root := filepath.Dir(uri)
+	fname := filepath.Base(uri)	
+	
+	bucket, err := blob.OpenBucket(ctx, root)
 
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	defer fh.Close()
+	fh, err := bucket.NewReader(ctx, fname, nil)
 
-	return NewGJSONLookup(fh)
-}
-
-func NewGJSONLookup(fh io.Reader) (Lookup, error) {
-
+	if err != nil {
+		return err
+	}
+	
 	body, err := ioutil.ReadAll(fh)
 
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	l := GJSONLookup{
-		body: body,
-	}
-
-	return &l, nil
+	lu.body = body
+	return nil
 }
 
 func (l *GJSONLookup) Find(path string) (interface{}, bool) {

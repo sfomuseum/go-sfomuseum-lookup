@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/aaronland/go-roster v0.0.1
-	github.com/aaronland/go-storage v0.0.1
+	github.com/aaronland/go-storage v0.0.1 // indirect
 	github.com/tidwall/gjson v1.3.5
 	github.com/whosonfirst/go-whosonfirst-crawl v0.2.0
 	github.com/whosonfirst/go-whosonfirst-csv v0.1.0
