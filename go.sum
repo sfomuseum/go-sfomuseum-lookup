@@ -20,6 +20,8 @@ github.com/Azure/go-autorest v12.0.0+incompatible/go.mod h1:r+4oMnoxhatjLLJ6zxSW
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/GoogleCloudPlatform/cloudsql-proxy v0.0.0-20190605020000-c4ba1fdf4d36/go.mod h1:aJ4qN3TfrelA6NZ6AXsXRfmEVaYin3EDbSPJrKS8OXo=
 github.com/MichaelTJones/walk v0.0.0-20161122175330-4748e29d5718/go.mod h1:VVwKsx9Dc8rNG55BWqogoJzGubjKnRoXdUvpGbWqeCc=
+github.com/aaronland/go-roster v0.0.1 h1:r1l4n1HfWvEtOXZvhfXX0Won9Xf6QJsigdUdzOtuy/M=
+github.com/aaronland/go-roster v0.0.1/go.mod h1:AcovpxlG1XxJxX2Fjqlm63fEIBhCjEIBV4lP87FZDmI=
 github.com/aaronland/go-storage v0.0.1 h1:yOGbG3JV3CP07OdNFFwc0x58CdX+jZ7mGlQSZNnI1k4=
 github.com/aaronland/go-storage v0.0.1/go.mod h1:R50t6ukpWXzj3GicXyKXzYMrz9ECie1LT/bTIGXc714=
 github.com/aaronland/go-string v0.1.0 h1:HU6OHmEpN2m9b5SOIwU6HoOq87Fvemj/0g6DTp8yzpk=
